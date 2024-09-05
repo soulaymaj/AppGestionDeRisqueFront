@@ -1,0 +1,153 @@
+/* General Layout Styles */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Sidebar Styles */
+.main-sidebar {
+  height: 100vh; /* Full height */
+  position: fixed; /* Fixed position */
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 250px; /* Adjust width as needed */
+  z-index: 1000; /* Ensure sidebar is on top */
+  background-color: #343a40; /* Dark background for the sidebar */
+}
+
+/* Sidebar Menu Styles */
+.sidebar {
+  padding-top: 20px; /* Add padding at the top */
+  overflow-y: auto; /* Enable vertical scrolling if needed */
+}
+
+.sidebar .nav-link {
+  color: #c2c7d0; /* Text color for sidebar links */
+}
+
+.sidebar .nav-link.active {
+  background-color: #007bff; /* Background color for active links */
+  color: #ffffff; /* Text color for active links */
+}
+
+.sidebar .nav-link:hover {
+  background-color: #495057; /* Highlight color on hover */
+  border-radius: 5px; /* Rounded corners on hover */
+}
+
+.sidebar .nav-icon {
+  color: #ffffff; /* Icon color */
+}
+
+/* Navbar Styles */
+.main-header {
+  position: fixed;
+  top: 0;
+  left: 250px; /* Match sidebar width */
+  width: calc(100% - 250px); /* Adjust width for the navbar */
+  z-index: 1001; /* Ensure navbar is on top */
+  background-color: #fff; /* Background color for navbar */
+  border-bottom: 1px solid #dee2e6; /* Optional border for navbar */
+}
+
+/* Content Wrapper */
+.content-wrapper {
+  margin-top: 56px; /* Offset by navbar height */
+  margin-left: 250px; /* Offset by sidebar width */
+  padding: 20px; /* Content padding */
+  background-color: #f8f9fa; /* Light background for content area */
+  min-height: calc(100vh - 56px); /* Adjust for full page minus navbar */
+}
+
+/* Navbar Brand Logo */
+.navbar-brand img {
+  max-width: 100px; /* Adjust logo size */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Navbar Link Styles */
+.navbar-nav .nav-link {
+  color: #343a40; /* Default text color for navbar links */
+}
+
+.navbar-nav .nav-link:hover {
+  color: #007bff; /* Text color on hover */
+}
+
+/* Navbar Form */
+.navbar .form-control-navbar {
+  border: none; /* Remove default border */
+  border-radius: 0; /* Remove border radius */
+  box-shadow: none; /* Remove box shadow */
+}
+
+/* Navbar Button */
+.navbar .btn-navbar {
+  background-color: #007bff; /* Background color */
+  color: #ffffff; /* Text color */
+}
+
+.navbar .btn-navbar:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Dropdown Menu Styles */
+.dropdown-menu {
+  border: 1px solid #dee2e6; /* Border around dropdown */
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Adjustments for Small Screens */
+@media (max-width: 767.98px) {
+  .main-header {
+      left: 0;
+      width: 100%;
+  }
+
+  .main-sidebar {
+      width: 100%;
+      position: relative;
+      top: 56px; /* Align with navbar height */
+  }
+
+  .content-wrapper {
+      margin-left: 0;
+  }
+}
+
+/* User Panel Styles */
+.user-panel {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+/* Ensure sidebar user image is displayed correctly */
+.sidebar .user-panel .image img {
+  width: 60px; /* Set a smaller width */
+  height: 60px; /* Set a smaller height */
+  border-radius: 50%; /* Make user image circular */
+  object-fit: cover; /* Ensure image covers the circular area */
+}
+
+
+.user-panel .info {
+  margin-left: 10px; /* Space between image and text */
+}
+
+.user-panel .info a {
+  color: #ffffff; /* User name color */
+  font-weight: 600; /* Bold user name */
+}
+
+/* Scrollbar Styles */
+.sidebar::-webkit-scrollbar {
+  width: 5px; /* Width of scrollbar */
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background-color: #6c757d; /* Color of scrollbar thumb */
+  border-radius: 10px; /* Rounded scrollbar thumb */
+}

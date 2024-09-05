@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body class="hold-transition login-page">
+    <div class="login-box">
+        <div class="login-logo">
+            <a href="#"><b>Bienvenue</b> Gestion de vos Risques</a>
+        </div>
+
+        <div class="card">
+            <div class="card-body login-card-body">
+                <p class="login-box-msg">Veuillez entrer vos coordonés</p>
+                <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Votre nom d'utilisateur" [(ngModel)]="model.nomutilisateur"
+                            name="nomutilisateur" required>
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-user"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-group mb-3">
+                        <input type="password" class="form-control" placeholder="Votre mot de passe" [(ngModel)]="model.motdepasse"
+                            name="motdepasse" required>
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-lock"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-8">
+                            <div class="icheck-primary">
+                                <input type="checkbox" id="remember">
+                                <label for="remember">
+                                    Se rappeler de moi
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="col-4">
+                            <button type="submit" class="btn btn-primary btn-block">Se connecter</button>
+                        </div>
+                    </div>
+                </form>
+
+                <p class="mb-1">
+                    <a href="forgot-password.html">J'ai oublié mon mot de passe</a>
+                </p>
+                <p class="mb-0">
+                    <a href="register.html" class="text-center">Créer un nouveau compte</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <!-- Scripts are managed via angular.json and included automatically -->
+</body>
+
+</html>

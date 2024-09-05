@@ -1,0 +1,23 @@
+/* src/styles.css */
+
+/* Example: Custom global font styles */
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Example: Adjust margins for all elements */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Example: Custom styles for AdminLTE specific elements */
+  .main-sidebar {
+    background-color: #343a40; /* Change sidebar color */
+  }
+  
+  .content-wrapper {
+    background-color: #f4f6f9; /* Change content background color */
+  }
+  

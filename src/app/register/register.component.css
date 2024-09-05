@@ -1,0 +1,100 @@
+/* Ensure the registration page covers the full viewport height */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif; /* Use a clean font */
+  background: linear-gradient(to right, #343a40, #1d2124); /* Background gradient */
+}
+
+/* Center the registration box horizontally and vertically */
+.register-box {
+  width: 400px; /* Adjust width as needed */
+  padding: 20px;
+  background: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+  border-radius: 8px; /* Rounded corners */
+  margin: 100px auto; /* Center it horizontally and add some margin from the top */
+}
+
+/* Style for the registration logo */
+.register-logo {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.register-logo a {
+  color: #343a40; /* Dark text for contrast */
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Style for the form */
+.card-body {
+  padding: 20px;
+}
+
+/* Header for the registration form */
+.register-header {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #343a40;
+}
+
+/* Style for the input fields */
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group .form-control {
+  border: 1px solid #ced4da; /* Light border for input fields */
+  border-radius: 4px; /* Rounded corners */
+}
+
+.input-group .input-group-text {
+  background: #343a40; /* Dark background for icons */
+  color: #ffffff; /* White icons */
+}
+
+/* Style for the submit button */
+.btn-primary {
+  background: #007bff; /* Primary blue background */
+  border: none; /* Remove default border */
+  color: #ffffff; /* White text */
+  border-radius: 4px; /* Rounded corners */
+}
+
+.btn-primary:hover {
+  background: #0056b3; /* Darker blue on hover */
+}
+
+/* Style for other links */
+.register-box-msg {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+a {
+  color: #007bff; /* Primary blue for links */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+/* Style for the terms checkbox */
+.icheck-primary input[type="checkbox"] {
+  cursor: pointer; /* Pointer cursor on checkbox */
+}
+
+.icheck-primary label {
+  font-weight: normal; /* Regular font weight for the label */
+}
+
+/* Adjust the positioning and layout for the form controls */
+.row {
+  margin: 0;
+}

@@ -1,0 +1,49 @@
+.actifs-container {
+    padding: 20px;
+  }
+  
+  .actifs-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .actifs-list li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .no-actifs-message {
+    color: #ff0000;
+    font-weight: bold;
+  }
+  /* Ensure content is correctly positioned under the navbar */
+.content-wrapper {
+    margin-top: 100px; /* Adjust according to your navbar height */
+    margin-left: 0px; /* Sidebar width */
+    padding: 0px; /* Padding around content */
+    background-color: #f8f9fa; /* Light background */
+    min-height: calc(100vh - 56px); /* Ensure content fills the remaining height */
+}
+
+/* Card styling to match the layout */
+.card {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); /* Subtle shadow for the card */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #ffffff; /* White background for the card */
+}
+
+.card-header {
+    background-color: #007bff; /* Header background color */
+    color: #ffffff; /* Header text color */
+}
+
+.card-title {
+    margin-bottom: 0; /* Remove bottom margin */
+}
+
+.card-body {
+    padding: 15px; /* Adjust padding inside the card */
+}
+
+
+

@@ -1,0 +1,85 @@
+<!-- Main Content Wrapper -->
+<div class="content-wrapper">
+  <div class="content pt-4">
+    <div class="container-fluid">
+      <div class="row">
+        <!-- Sidebar (HomeComponent) occupying 2/12 -->
+        <div class="col-md-2">
+          <app-home></app-home>
+        </div>
+
+        <!-- Main content occupying 10/12 -->
+        <div class="col-md-10">
+          <div class="card"> <!-- Added card to wrap the content -->
+            <div class="card-header d-flex justify-content-between align-items-center">
+              <h5 class="card-title">Liste Des Actifs</h5>
+              <button class="btn btn-primary" (click)="toggleAddActifForm()">
+                {{ showAddActifForm ? 'Annuler' : 'Ajouter un Actif' }}
+              </button>
+            </div>
+
+            <div class="card-body">
+              <!-- Conditionally render the form to add a new actif -->
+              <div *ngIf="showAddActifForm" class="mb-4">
+                <h6>Ajouter un nouvel actif</h6>
+                <div class="form-row">
+                  <div class="col">
+                    <input type="text" class="form-control" [(ngModel)]="newActif.nom" placeholder="Nom">
+                  </div>
+                  <div class="col">
+                    <input type="text" class="form-control" [(ngModel)]="newActif.description" placeholder="Description">
+                  </div>
+                  <div class="col-auto">
+                    <button class="btn btn-success" (click)="addActif()">Ajouter</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Display a message if no actifs found -->
+              <div *ngIf="actifs.length === 0" class="text-center">No actifs found.</div>
+
+              <!-- Table of actifs -->
+              <table *ngIf="actifs.length > 0" class="table table-bordered table-striped">
+                <thead>
+                  <tr>
+                    <th>Nom</th>
+                    <th>Description</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let actif of actifs">
+                    <td>{{ actif.nom }}</td>
+                    <td>{{ actif.description }}</td>
+                    <td>
+                      <button class="btn btn-primary btn-sm mr-2" (click)="selectActif(actif)">Modifier</button>
+                      <button class="btn btn-danger btn-sm" (click)="deleteActif(actif.id)">Supprimer</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <!-- Form to update the selected actif -->
+              <div *ngIf="selectedActif" class="mt-4">
+                <h6>Modifier l'actif sélectionné</h6>
+                <div class="form-row">
+                  <div class="col">
+                    <input type="text" class="form-control" [(ngModel)]="selectedActif.nom" placeholder="Nom">
+                  </div>
+                  <div class="col">
+                    <input type="text" class="form-control" [(ngModel)]="selectedActif.description" placeholder="Description">
+                  </div>
+                  <div class="col-auto">
+                    <button class="btn btn-success" (click)="updateActif()">Mettre à jour</button>
+                    <button class="btn btn-secondary" (click)="clearSelection()">Annuler</button>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
